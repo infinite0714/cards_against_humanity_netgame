@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "captcha-verify"
+  ],
+  "parentResource": "amplifycomedycards0d609b22",
+  "functionName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse",
+  "resourceName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\VerifyAuthChallengeResponse",
+  "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
+  "triggerEventPath": "VerifyAuthChallengeResponse.event.json",
+  "roleName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse",
+  "skipEdit": true
+}

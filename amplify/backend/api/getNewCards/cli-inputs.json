@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "paths": {
+    "/new-cards": {
+      "name": "/new-cards",
+      "lambdaFunction": "newCardsLambda",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    }
+  }
+}

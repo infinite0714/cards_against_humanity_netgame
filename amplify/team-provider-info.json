@@ -1,0 +1,44 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifycomedycards-dev-150210-authRole",
+      "UnauthRoleArn": "arn:aws:iam::678328480611:role/amplify-amplifycomedycards-dev-150210-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::678328480611:role/amplify-amplifycomedycards-dev-150210-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifycomedycards-dev-150210-deployment",
+      "UnauthRoleName": "amplify-amplifycomedycards-dev-150210-unauthRole",
+      "StackName": "amplify-amplifycomedycards-dev-150210",
+      "StackId": "arn:aws:cloudformation:us-east-1:678328480611:stack/amplify-amplifycomedycards-dev-150210/67bdfdd0-3249-11ee-8be3-1226aae3d027",
+      "AmplifyAppId": "d3monjrk7kin6g",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplifycomedycards-dev-150210-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifycomedycards-dev-150210-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "amplifycomedycards0d609b22": {}
+      },
+      "function": {
+        "amplifycomedycards0d609b22DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-amplifycomedycards-dev-150210-deployment",
+          "s3Key": "amplify-builds/amplifycomedycards0d609b22DefineAuthChallenge-48725974775439626634-build.zip"
+        },
+        "amplifycomedycards0d609b22CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-amplifycomedycards-dev-150210-deployment",
+          "s3Key": "amplify-builds/amplifycomedycards0d609b22CreateAuthChallenge-3863514f6a485750612b-build.zip"
+        },
+        "amplifycomedycards0d609b22VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "",
+          "deploymentBucketName": "amplify-amplifycomedycards-dev-150210-deployment",
+          "s3Key": "amplify-builds/amplifycomedycards0d609b22VerifyAuthChallengeResponse-2b5756396b3757526f67-build.zip"
+        },
+        "newCardsLambda": {
+          "deploymentBucketName": "amplify-amplifycomedycards-dev-150210-deployment",
+          "s3Key": "amplify-builds/newCardsLambda-62517375596c52386565-build.zip"
+        }
+      },
+      "api": {
+        "getNewCards": {}
+      }
+    }
+  }
+}

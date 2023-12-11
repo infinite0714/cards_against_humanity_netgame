@@ -1,0 +1,171 @@
+{
+  "api": {
+    "getNewCards": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "newCardsLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "amplifycomedycards0d609b22": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22DefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22CreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "amplifycomedycards0d609b22CreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "amplifycomedycards0d609b22DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "amplifycomedycards0d609b22VerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "newCardsLambda": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_amplifycomedycards0d609b22CreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22CreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22DefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22DefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22VerifyAuthChallengeResponse_RECAPTCHASECRET": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22VerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifycomedycards0d609b22VerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifycomedycards0d609b22VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_newCardsLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "newCardsLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_newCardsLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "newCardsLambda"
+        }
+      ]
+    }
+  }
+}
